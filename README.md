@@ -17,7 +17,7 @@ Started in April 2017, NUKE is a free, open-source **build automation system for
 ## Project leads
 
 [<img align="left" width="75px" src="https://github.com/nuke-build/all/raw/master/images/matkoch.png" />](https://twitter.com/matkoch87)
-**Matthias Koch** &mdash; Lover of clean code, API design and software architecture. He started with NUKE in 2017 after searching for the perfect build system for one of his open-source projects. At JetBrains he is working as a developer advocate for the .NET department.
+**Matthias Koch** &mdash; Lover of clean code, API design and software architecture. He started with NUKE in 2017 after searching for the perfect build system for one of his open-source projects. At JetBrains he is working as a developer advocate for the .NET department. [Follow him on Twitter!](https://twitter.com/matkoch87)
 
 [<img align="left" width="75px" src="https://github.com/nuke-build/all/raw/master/images/arodus.jpg" />](https://twitter.com/s_karasek)
-**Sebastian Karasek** &mdash; He is a passionate full stack developer familiar with different technologies and languages. Following his ideals to _automate everything_, he joined NUKE in early 2018 with special focus on code-generation for third-party tools.
+**Sebastian Karasek** &mdash; He is a passionate full stack developer familiar with different technologies and languages. Following his ideals to _automate everything_, he joined NUKE in early 2018 with special focus on code-generation for third-party tools. [Follow him on Twitter!](https://twitter.com/s_karasek)
