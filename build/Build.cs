@@ -18,7 +18,7 @@ class Build : NukeBuild
 {
 	public static int Main() => Execute<Build>(x => x.Prepare);
 
-	[Parameter] readonly bool UseSsh;
+	[Parameter] readonly bool Https;
 	
 	string Solution => RootDirectory / "nuke.sln";
 	AbsolutePath RepositoriesDirectory => RootDirectory / "repositories";
@@ -34,7 +34,7 @@ class Build : NukeBuild
 			foreach (var repository in repositories)
 			{
 				var repositoryDirectory = RepositoriesDirectory / repository.Identifier;
-				var origin = UseSsh ? repository.SshUrl : repository.HttpsUrl;
+				var origin = Https ? repository.HttpsUrl : repository.SshUrl;
 				var branch = repository.Branch ?? "master";
 
 				if (!Directory.Exists(repositoryDirectory))
