@@ -1,11 +1,13 @@
 - https://github.com/nuke-build/nuke#develop
 - https://github.com/nuke-build/azure
 - https://github.com/nuke-build/azure-keyvault
+- https://github.com/nuke-build/compression
 - https://github.com/nuke-build/docfx
 - https://github.com/nuke-build/docker
+- https://github.com/nuke-build/helm
+- https://github.com/nuke-build/kubernetes
 - https://github.com/nuke-build/nswag
-- https://github.com/nuke-build/compression
-- https://github.com/nuke-build/resharper
-- https://github.com/nuke-build/vscode
 - https://github.com/nuke-build/presentation
+- https://github.com/nuke-build/resharper
 - https://github.com/nuke-build/web
+- https://github.com/nuke-build/vscode
