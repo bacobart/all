@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using JetBrains.Annotations;
 using Nuke.Common;
 using Nuke.Common.Git;
 using Nuke.Common.IO;
@@ -47,27 +48,107 @@ class Build : NukeBuild
 	Target Readme => _ => _
 		.Executes(() =>
 		{
-			IReadOnlyCollection<string> GetGlobalSection(string readmeFile)
+			var lines = File.ReadAllLines(RootDirectory / "README.md").ToList();
+
+			void Purge()
 			{
-				var readmeContent = File.ReadAllLines(readmeFile).ToList();
-				var startIndex = readmeContent.FindIndex(x => x.StartsWith("<!-- BEGIN GLOBAL SECTION -->"));
-				var endIndex = readmeContent.FindIndex(x => x.StartsWith("<!-- END GLOBAL SECTION -->"));
+				for (var i = 0; i < lines.Count; i++)
+				{
+					if (!lines[i].StartsWith("<!-- BEGIN"))
+						continue;
 
-				if (startIndex == -1 && endIndex == -1)
-					return new List<string>();
-				Assert(startIndex > -1 && endIndex > -1, "Incomplete defined global section in '{readmeFile}'.");
-
-				readmeContent.RemoveRange(endIndex, readmeContent.Count - endIndex);
-				readmeContent.RemoveRange(index: 0, count: startIndex);
-				
-				return readmeContent;
+					i++;
+					while (i < lines.Count && !lines[i].StartsWith("<!-- END"))
+					{
+						lines.RemoveAt(i);
+					}
+				}
 			}
 
-			var readmeFiles = new DirectoryInfo(RepositoriesDirectory)
+			void AddEntries(Category category, IEnumerable<ReadmeEntry> entries)
+			{
+				var index = lines.FindIndex(x => x.Equals($"<!-- BEGIN {category.ToString().ToUpper()} -->")) + 1;
+				foreach (var entry in entries.Reverse())
+					lines.Insert(index, $"| {entry.Name} | {entry.Description} |");
+				lines.Insert(index, "| --- | --- |");
+				lines.Insert(index, "| Name | Description |");
+			}
+			
+			Purge();
+
+			var allEntries = new DirectoryInfo(RepositoriesDirectory)
 				.EnumerateFiles("README.md", maxDepth: 3)
-				.Select(x => x.FullName)
-				.Select(GetGlobalSection);
+				.Select(ReadmeEntry.TryCreate)
+				.WhereNotNull()
+				.OrderBy(x => x.Name)
+				.ToLookup(x => x.Category);
+			AddEntries(Category.Common, allEntries[Category.Common]);
+			AddEntries(Category.Extensions, allEntries[Category.Extensions]);
+			AddEntries(Category.Addons, allEntries[Category.Addons]);
+
+			File.WriteAllLines(RootDirectory / "README.md", lines);
 		});
+
+	enum Category
+	{
+		Common,
+		Extensions,
+		Addons
+	}
+
+	class ReadmeEntry
+	{
+		[CanBeNull]
+		public static ReadmeEntry TryCreate(FileInfo readmeFile)
+		{
+			var readmeContent = File.ReadAllLines(readmeFile.FullName).ToList();
+			var startIndex = readmeContent.FindIndex(x => x.StartsWith("<!-- BEGIN DESCRIPTION -->"));
+			var endIndex = readmeContent.FindIndex(x => x.StartsWith("<!-- END DESCRIPTION -->"));
+
+			if (startIndex == -1 && endIndex == -1)
+				return null;
+			Assert(startIndex > -1 && endIndex > -1, $"Incomplete description section in '{readmeFile}'.");
+
+			var description = readmeContent
+				.Skip(startIndex + 1)
+				.Take(endIndex - startIndex - 1)
+				.Reverse().SkipWhile(string.IsNullOrWhiteSpace)
+				.Reverse().SkipWhile(string.IsNullOrWhiteSpace)
+				.Join("<br />");
+
+			var repository = GitRepository.FromLocalDirectory(readmeFile.Directory.NotNull().FullName);
+			var name = repository.Identifier;
+			var category = s_commonRepositories.Contains(name, StringComparer.OrdinalIgnoreCase)
+				? Category.Common
+				: s_extensionRepositories.Contains(name, StringComparer.OrdinalIgnoreCase)
+					? Category.Extensions
+					: Category.Addons;
+
+			return new ReadmeEntry
+			       {
+				       Name = name,
+				       Category = category,
+				       Description = description,
+				       Repository = repository
+			       };
+		}
+
+		static readonly string[] s_commonRepositories =
+		{
+			"nuke-build/common"
+		};
+
+		static readonly string[] s_extensionRepositories =
+		{
+			"nuke-build/vscode",
+			"nuke-build/resharper"
+		};
+
+		public string Name { get; private set; }
+		public Category Category { get; private set; }
+		public string Description { get; private set; }
+		public GitRepository Repository { get; private set; }
+	}
 
 	Target Prepare => _ => _
 		.DependsOn(Checkout)
