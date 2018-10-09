@@ -7,11 +7,10 @@ viewBox="0 0 15875 12700"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .fil4 {fill:#FEFEFE}
-    .fil1 {fill:#F7B332}
-    .fil2 {fill:black}
-    .fil0 {fill:white}
-    .fil3 {fill:black;fill-rule:nonzero}
+    .fil4 {fill:#666666}
+    .fil1 {fill:#222222}
+    .fil2 {fill:white}
+    .fil3 {fill:#F7B332;fill-rule:nonzero}
    ]]>
   </style>
       <mask id="id0">
@@ -32,7 +31,6 @@ viewBox="0 0 15875 12700"
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
   <g id="_1497950288960">
-   <polygon class="fil0" points="0,0 15875,0 15875,12700 0,12700 "/>
    <g>
     <path class="fil1" d="M10261 2910l-4647 0c-614,0 -1117,502 -1117,1117l0 4646c0,615 503,1117 1117,1117l4647 0c614,0 1117,-502 1117,-1117l0 -4646c0,-615 -503,-1117 -1117,-1117z"/>
     <g>
