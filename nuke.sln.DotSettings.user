@@ -1,2 +1,43 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:Boolean x:Key="/Default/CodeInspection/Highlighting/IncludeWarningsInSwea/@EntryValue">False</s:Boolean></wpf:ResourceDictionary>
+	<s:Boolean x:Key="/Default/CodeInspection/Highlighting/IncludeWarningsInSwea/@EntryValue">False</s:Boolean>
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
+  &lt;Assembly Path="/Users/matt/.nuget/packages/nuke.common/0.9.0/lib/netstandard2.0/Nuke.Common.dll" /&gt;
+&lt;/AssemblyExplorer&gt;</s:String>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=05608fe6_002D4fd1_002D4e9d_002D9be2_002Db13a0e370ba2_0023ReSharper_002ENuke/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=084172d1_002Da9c6_002D46d0_002D96ad_002D05c5b09a5e5d_0023ReSharper_002ENuke_002ERider/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=089233b5_002D69fc_002D46b1_002D9281_002D8506cbb30a66_0023_005Fbuild/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=091d5256_002De064_002D4032_002Db7b9_002Da8a68efb85ae_0023_005Fbuild/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=140a4f0d_002Dc21d_002D4212_002Dbb75_002Defdbdbbd5e1b_0023Nuke_002EGlobalTool/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=19415c0b_002Df591_002D4e39_002Db2fe_002D7e3a94e91af9_0023Nuke_002EAzure_002EGenerator_002ETests/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=19ca2786_002De7f5_002D4d5e_002Db0c1_002D7972855c74f9_0023Nuke_002EHelm_002EGenerator_002ETests/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=19ca46d7_002D8722_002D4a04_002D8d1b_002D71d35d12eaaa_0023Nuke_002EAzure_002EGenerator/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=1a15351c_002De174_002D4156_002D863b_002D198b2302e7fb_0023Nuke_002ENSwag_002EGenerator/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=23bb7e49_002D98a6_002D4501_002D9861_002D9924d3f1d8a2_0023Nuke_002EKubernetes_002EGenerator/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=30ec604d_002D8723_002D4800_002D9527_002D92d8fdd60ad5_0023Nuke_002EDocFX/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=34fbd413_002Dad5d_002D493e_002Dbd61_002Ded8497d314a0_0023Nuke_002ECodeGeneration/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=4518907e_002Dedfb_002D4b0b_002Db1af_002D98bb01ca737b_0023Nuke_002ECompression_002ETests/@EntryIndexedValue">True</s:Boolean>
+	
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=637692b6_002D18d5_002D4145_002D99da_002Dfede611a3533_0023source/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=656f585c_002D0b2d_002D429d_002D95a7_002D226ef59dab79_0023Nuke_002EMSBuildLocator/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=70848013_002Da3c2_002D4eab_002D9572_002De9148876026f_0023_005Fbuild/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=73f4391b_002D755b_002D45a4_002D9097_002Dd94352306487_0023Nuke_002EHelm_002EGenerator/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=7bd95416_002D4336_002D4781_002D867e_002Df6184294274d_0023Nuke_002ENSwag/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=830b0f1d_002Dbb65_002D49f3_002Db076_002D942d0b0be6b3_0023_005Fbuild/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=83467c05_002D396b_002D4d4d_002D86a5_002Dbd81b0220a27_0023Nuke_002ECompression/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=891c218e_002D9d21_002D43e0_002D8bb8_002D943b51e0c3c4_0023Nuke_002EHelm/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=8dcd0f03_002D29e7_002D4c09_002Dbd27_002D882bb3f1d7d0_0023Nuke_002EKubernetes/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=90f54f1d_002D823c_002D4ccb_002D831d_002D363a3418ea7b_0023_005Fbuild/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=ade3316f_002D31ea_002D4c5f_002D8c8b_002D02665cfe9722_0023Nuke_002EDocFX_002EGenerator/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=ae561c37_002D4bc0_002D4af1_002D9740_002Df5ed836789b8_0023Nuke_002EAzure_002EKeyVault/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=afc82a92_002Dcb93_002D49a5_002D88b6_002D09b7e5439ce8_0023_005Fbuild/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=b6d4e654_002D6822_002D42ff_002D86ad_002Ddb07be759760_0023Nuke_002ECommon/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=bb6a9024_002D24db_002D4170_002Da09b_002D02349148a78f_0023_005Fbuild/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=bd416dd4_002D06f4_002D4246_002Db92c_002Db261b026b6e9_0023Nuke_002EGlobalTool_002ETests/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=c4cefcc5_002D1387_002D4340_002Db1be_002Dec421511f734_0023Nuke_002ECommon_002ETests/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=cadaee80_002D7e19_002D411e_002Db851_002Da52105eb65f0_0023_005Fbuild/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=cc0913a7_002D3cf1_002D45e1_002D8226_002D71023733be97_0023_005Fbuild/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=d9df1918_002Defec_002D487c_002Dade2_002Dce152218a559_0023Nuke_002EAzure/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=ebcb4686_002D9d19_002D411a_002Db52f_002D26b8a12582d6_0023_005Fbuild/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=efa0675e_002Db0b7_002D4674_002D9e5b_002D40e34a3b206b_0023Nuke_002EDocker/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=f4ee2620_002Dd08b_002D446a_002D931d_002Dcdae51432496_0023Nuke_002EDocker_002EGenerator_002ETests/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=ff5c6967_002Df4b5_002D44b2_002D9a92_002D03c2269d2dee_0023Nuke_002EDocker_002EGenerator/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>
