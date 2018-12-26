@@ -96,9 +96,12 @@ Global
                     var guid = declaration.Substring(declaration.Length - 38, 36);
                     if (guidDictionary.TryGetValue(guid, out var value))
                     {
+                        var solutionFileToFix = solution.Name.Contains("template")
+                            ? value.SolutionFile
+                            : solution.File;
                         TextTasks.WriteAllText(
-                            solution.File,
-                            TextTasks.ReadAllText(solution.File)
+                            solutionFileToFix,
+                            TextTasks.ReadAllText(solutionFileToFix)
                                 .Replace(guid, Guid.NewGuid().ToString("D").ToUpper()));
 
                         ControlFlow.Fail(new[]

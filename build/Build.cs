@@ -7,6 +7,7 @@ using Nuke.Common.Git;
 using Nuke.Common.Tooling;
 using Nuke.Common.Utilities;
 using Nuke.Common.Utilities.Collections;
+using static Nuke.Common.ControlFlow;
 using static Nuke.Common.IO.FileSystemTasks;
 using static Nuke.Common.IO.PathConstruction;
 using static Nuke.Common.IO.SerializationTasks;
@@ -79,8 +80,8 @@ partial class Build : NukeBuild
                 .Concat(GitRepository.FromUrl($"https://github.com/{Organization}/{LispName}", DefaultBranch))
                 .Select(x => $"{x.HttpsUrl}").OrderBy(x => x).ToList();
             YamlSerializeToFile(updatedRepositories, RepositoriesFile);
-            
-            PrepareSolution();
+
+            ExecuteWithRetry(PrepareSolution, retryAttempts: 5);
         });
 
     void CopyTemplate(AbsolutePath repositoryDirectory)
@@ -93,9 +94,13 @@ partial class Build : NukeBuild
                                { "Template", PascalName },
                                { "template", LispName }
                            };
-        FillTemplateFile(repositoryDirectory / ".nuke", replacements: replacements);
-        FillTemplateFile(repositoryDirectory / "nuke-template.sln", replacements: replacements);
-        
+        new[]
+        {
+            (RelativePath) ".nuke",
+            (RelativePath) "nuke-template.sln",
+            (RelativePath) "src" / "Nuke.Template.Tests" / "Nuke.Template.Tests.csproj"
+        }.ForEach(x => FillTemplateFile(repositoryDirectory / x, replacements: replacements));
+
         GlobDirectories(repositoryDirectory, "**/Nuke.*").ToList()
             .ForEach(x => Directory.Move(x, x.Replace("Template", PascalName)));
         GlobFiles(repositoryDirectory, "**/Nuke.*").ToList()
