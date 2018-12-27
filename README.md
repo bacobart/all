@@ -2,6 +2,8 @@
 
 [<img align="right" width="120px" src="https://github.com/nuke-build/all/raw/master/images/icon.png" />](https://nuke.build)
 
+[<img align="right" width="120px" src="https://github.com/nuke-build/all/raw/master/images/dotnet.png" />](https://dotnet.microsoft.com/)
+
 Founded in April 2017, NUKE is a free, open-source build automation system for C#/.NET that runs cross-platform on .NET Core, .NET Framework, and Mono. While builds are bootstrapped with conventional Bash or PowerShell scripts, their actual implementation resides in simple [C# console applications](http://www.nuke.build/docs/authoring-builds/fundamentals.html). This approach unleashes the power of the type system and natively provides IDE features like code-completion, refactorings, and debugging. A custom [global tool](http://www.nuke.build/docs/running-builds/global-tool.html) and several [IDE extensions](http://www.nuke.build/docs/running-builds/from-ides.html) further improve how build projects are setup, authored and executed.
 
 - _New to NUKE? Get started by either [reading](http://www.nuke.build/docs/getting-started/philosophy.html), [listening](https://dotnetrocks.com/?show=1598) or [watching](https://www.youtube.com/watch?v=7gEqxzD6hbs)._
