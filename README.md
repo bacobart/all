@@ -12,10 +12,19 @@ Founded in April 2017, NUKE is a free, open-source build automation system for C
 
 # Contributors
 
+Thanks to all the great people who've contributed to the project! 
+
 [![Contributors](https://opencollective.com/nuke/contributors.svg)](http://github.com/nuke-build/contributors.md)
+
+# Backers & Sponsors
+
+[![OpenCollective](https://opencollective.com/nuke/backers/badge.svg?style=flat-square)](https://opencollective.com/nuke/order/7399) 
+[![OpenCollective](https://opencollective.com/nuke/sponsors/badge.svg?style=flat-square)](https://opencollective.com/nuke/order/7400)
+
+This project is driven by contributors investing their private free time. If it helps you improving your productivity and thus financial situation, please consider becoming a [backer](https://opencollective.com/nuke/order/7399) (individuals) or [sponsor](https://opencollective.com/nuke/order/7400) (companies). Your monetary contributions will be used to further promote the project (website, stickers, cups). Additional profits will be forwarded to non-profit associations. 
 
 # Acknowledgements
 
-Thanks to [JetBrains](https://jetbrains.com) and [MyGet](https://myget.org) for making open-source development so enjoyable.
+Thanks to [JetBrains](https://jetbrains.com) and [MyGet](https://myget.org) for making open-source development so enjoyable!
 
 [<img src="https://raw.githubusercontent.com/nuke-build/all/master/images/rider.png" height="100" />](https://jetbrains.com/rider) &nbsp;&nbsp;&nbsp; [<img src="https://raw.githubusercontent.com/nuke-build/all/master/images/myget.png" height="100" />](https://myget.org)
