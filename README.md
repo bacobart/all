@@ -14,6 +14,6 @@ Founded in April 2017, NUKE is a free, open-source build automation system for C
 
 # Acknowledgements
 
-Thanks to [JetBrains](https://jetbrains.com) and [MyGet](https://myget.com) for supporting open-source projects.
+Thanks to [JetBrains](https://jetbrains.com) and [MyGet](https://myget.org) for making open-source development so enjoyable.
 
-[<img src="https://raw.githubusercontent.com/nuke-build/all/master/images/rider.png" height="100" />](https://jetbrains.com/rider)&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/nuke-build/all/master/images/myget.png" height="100" />
+[<img src="https://raw.githubusercontent.com/nuke-build/all/master/images/rider.png" height="100" />](https://jetbrains.com/rider) &nbsp;&nbsp;&nbsp; [<img src="https://raw.githubusercontent.com/nuke-build/all/master/images/myget.png" height="100" />](https://myget.org)
